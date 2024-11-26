@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+header img {
+    width: 50%;
+    height: 60%;
+}
+
+#about {
+    text-align: center;
+}
+
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sidebar .avatar img {
+    width: 60%;
+    border-radius: 50%;
+    margin: 0 auto; 
+    display: block;
+}
+
+.sidebar .nav-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .nav-item:hover {
+    background-color: #555;
+}
+
+.sidebar .nav-item i {
+    margin-bottom: 5px;
+}
+
+.main-content {
+    margin-left: 270px;
+    padding: 40px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #ffffff;
+}
+
+header p {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* Section Styling */
+.section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.skill img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; 
+}
+
+.skill:hover img {
+    transform: scale(1.1);
+}
+
+.skill span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+}
+
+.skill:hover span {
+    opacity: 1;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.work-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.work-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+.contact-methods {
+    display: flex;
+    gap: 20px;
+    justify-content: center; 
+}
+
+.contact-methods a {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-methods a:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.contact-methods i {
+    margin-right: 10px;
+}
+
+.footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    .main-content {
+        margin-left: 170px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+}
